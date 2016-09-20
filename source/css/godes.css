@@ -6,10 +6,13 @@ html, body {
 	box-sizing: border-box;
 }
 
-.kolom-1, .kolom-2 {
+.kolom-1, .kolom-2, .kolom-3, .kolom-4, .kolom-5, .kolom-6, .kolom-7, .kolom-7, .kolom-8, .kolom-9, .kolom-10 {
 	position: relative;
+	float: left;
+	min-height: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
-
 .kolom-1 {
 	width: 10%;
 }
@@ -39,4 +42,23 @@ html, body {
 }
 .kolom-10 {
 	width: 100%;
+}
+
+.candy-berry {
+	background-color: #ff325a;
+}
+.candy-pink {
+	background-color: #ff3277;
+}
+.candy-lemon {
+	background-color: #ffe32f; 
+}
+.candy-squash {
+	background-color: #30e5ff;
+}
+.candy-hijau {
+	background-color: #4cff4f;
+}
+.candy-biru {
+	background-color: #00a4ff;
 }
