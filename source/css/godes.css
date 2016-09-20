@@ -5,3 +5,38 @@ html, body {
 * {
 	box-sizing: border-box;
 }
+
+.kolom-1, .kolom-2 {
+	position: relative;
+}
+
+.kolom-1 {
+	width: 10%;
+}
+.kolom-2 {
+	width: 20%;
+}
+.kolom-3 {
+	width: 30%;
+}
+.kolom-4 {
+	width: 40%;
+}
+.kolom-5 {
+	width: 50%;
+}
+.kolom-6 {
+	width: 60%;
+}
+.kolom-7 {
+	width: 70%;
+}
+.kolom-8 {
+	width: 80%;
+}
+.kolom-9 {
+	width: 90%;
+}
+.kolom-10 {
+	width: 100%;
+}
