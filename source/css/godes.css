@@ -4,18 +4,19 @@
 }
 
 :root {
-	--berry: #ff325a;
-	--bg: #ff3277;
-	--lemon: #ffe32f;
-	--sky: #30e5ff;
-	--leaf: #4cff4f;
-	--sea: #00a4ff;
+	--red: #ff325a;
+	--pink: #ff3277;
+	--yellow: #ffe32f;
+	--lightblue: #30e5ff;
+	--green: #4cff4f;
+	--blue: #00a4ff;
 
 	--color-light: #e0e0e0;
 
 	--full-size: 20px;
 	--half-size: 10px;
-	--ahalf-size: 5px;
+	--middle-size: 7px;
+	--small-size: 5px;
 	--min-full-size: -20px;
 }
 
@@ -27,7 +28,34 @@ html, body {
 * {
 	box-sizing: border-box;
 }
+/*Margin Style*/
+.m-full {
+	margin: var(--full-size);
+}
+.m-top-full {
+	margin-top: var(--full-size);
+}
+.m-bottom-full {
+	margin-bottom: var(--full-size);
+}
+.m-left-full {
+	margin-left: var(--full-size);
+}
+.m-right-full {
+	margin-right: var(--full-size);
+}
+.m-topbottom-full {
+	margin-top: var(--full-size);
+	margin-bottom: var(--full-size);
+}
+.m-leftright-full {
+	margin-left: var(--full-size);
+	margin-right: var(--full-size);
+}
 
+.m-top-half {
+	margin-top: var(--half-size);
+}
 
 /*Div Style*/
 .section {
@@ -92,22 +120,22 @@ html, body {
 
 /*Color Style*/
 .bg-berry {
-	background-color: var(--berry);
+	background-color: var(--red);
 }
 .bg-pink {
-	background-color: var(--bg);
+	background-color: var(--pink);
 }
 .bg-lemon {
-	background-color: var(--lemon); 
+	background-color: var(--yellow); 
 }
 .bg-squash {
-	background-color: var(--sky);
+	background-color: var(--lightblue);
 }
 .bg-hijau {
-	background-color: var(--leaf);
+	background-color: var(--green);
 }
 .bg-biru {
-	background-color: var(--sea);
+	background-color: var(--blue);
 }
 
 /*Text Style*/
@@ -154,4 +182,45 @@ hr.line {
 }
 hr.dash {
 	border-style: dashed;
+}
+
+/*Color Style*/
+.color-light {
+	color: #FFF;
+}
+.color-dark {
+	color: #444;
+}
+
+/*Button Style*/
+.btn {
+	padding: var(--middle-size) var(--full-size);
+	font-size: 15px;
+	border: 0px;
+	font-family: roboto;
+}
+.btn:hover {
+	cursor: pointer;
+	opacity: 0.85;
+}
+.btn-full {
+	width: 100%;
+}
+.btn-red {
+	background-color: var(--red);
+}
+.btn-pink {
+	background-color: var(--pink);
+}
+.btn-yellow {
+	background-color: var(--yellow);
+}
+.btn-lightblue {
+	background-color: var(--lightblue);
+}
+.btn-green {
+	background-color: var(--green);
+}
+.btn-blue {
+	background-color: var(--blue);
 }
