@@ -57,6 +57,13 @@ html, body {
 	margin-top: var(--half-size);
 }
 
+/*Element Align Style*/
+.set-left {
+	float: left;
+}
+.set-right {
+	float: right;
+}
 /*Div Style*/
 .section {
 	width: 980px;
@@ -223,4 +230,57 @@ hr.dash {
 }
 .btn-blue {
 	background-color: var(--blue);
+}
+
+/*Form Style*/
+.form-input {
+	font-size: 15px;
+	width: 100%;
+}
+.form-input:focus {
+	outline-width: 0px;
+}
+input.form-input {
+	border: 0px;
+	border-bottom: 1px solid var(--color-light);
+	padding-top: var(--middle-size);
+	padding-bottom: var(--middle-size);
+}
+input.form-input:focus, textarea.form-input:focus {
+	border-color: var(--blue);
+}
+input[type=checkbox] {
+	margin: 0px;
+	margin-right: var(--half-size);
+}
+input[type=checkbox]:hover {
+	cursor: pointer;
+}
+textarea.form-input {
+	padding: var(--middle-size);
+	border:1px solid var(--color-light);
+	min-width: 100%;
+	max-width: 100%;
+	font-family: inherit;
+}
+label {
+	cursor: pointer;
+}
+
+/*Notification Style*/
+.notif {
+	padding: var(--half-size) var(--full-size);
+	width: 100%;
+}
+.notif-green {
+	background-color: var(--green);
+}
+.notif-blue {
+	background-color: var(--blue);
+}
+.notif-yellow {
+	background-color: var(--yellow);
+}
+.notif-red {
+	background-color: var(--red);
 }
