@@ -57,6 +57,13 @@ html, body {
 	margin-top: var(--half-size);
 }
 
+/*Element Align Style*/
+.set-left {
+	float: left;
+}
+.set-right {
+	float: right;
+}
 /*Div Style*/
 .section {
 	width: 980px;
@@ -119,22 +126,22 @@ html, body {
 }
 
 /*Color Style*/
-.bg-berry {
+.bg-red {
 	background-color: var(--red);
 }
 .bg-pink {
 	background-color: var(--pink);
 }
-.bg-lemon {
+.bg-yellow {
 	background-color: var(--yellow); 
 }
-.bg-squash {
+.bg-lightblue {
 	background-color: var(--lightblue);
 }
-.bg-hijau {
+.bg-green {
 	background-color: var(--green);
 }
-.bg-biru {
+.bg-blue {
 	background-color: var(--blue);
 }
 
@@ -223,4 +230,58 @@ hr.dash {
 }
 .btn-blue {
 	background-color: var(--blue);
+}
+.btn-close {
+	border:0px;
+	background-color: rgba(255, 255, 255, 0.39);
+	font-weight: bold;
+	font-size: large;
+    padding: 0px 5px;
+}
+.btn-close:hover {
+	cursor: pointer;
+	color: #8c8c8c;
+}
+/*Form Style*/
+.form-input {
+	font-size: 15px;
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-light);
+}
+.form-input:focus {
+	outline-width: 0px;
+	border-color: var(--blue);
+}
+input.form-input {
+	border-width: 0px;
+	border-bottom-width: 1px;
+	padding-top: var(--middle-size);
+	padding-bottom: var(--middle-size);
+}
+textarea.form-input {
+	min-width: 100%;
+	max-width: 100%;
+	font-family: inherit;
+}
+select.form-input {
+	padding: var(--middle-size);
+}
+textarea.form-input {
+	padding: var(--half-size);
+}
+
+input[type=checkbox] {
+	margin: 0px;
+	margin-right: var(--middle-size);
+}
+input[type=checkbox]:hover, label {
+	cursor: pointer;
+}
+
+/*Notification Style*/
+.notif {
+	padding: var(--half-size) var(--full-size);
+	width: 100%;
 }
