@@ -126,22 +126,22 @@ html, body {
 }
 
 /*Color Style*/
-.bg-berry {
+.bg-red {
 	background-color: var(--red);
 }
 .bg-pink {
 	background-color: var(--pink);
 }
-.bg-lemon {
+.bg-yellow {
 	background-color: var(--yellow); 
 }
-.bg-squash {
+.bg-lightblue {
 	background-color: var(--lightblue);
 }
-.bg-hijau {
+.bg-green {
 	background-color: var(--green);
 }
-.bg-biru {
+.bg-blue {
 	background-color: var(--blue);
 }
 
@@ -231,39 +231,52 @@ hr.dash {
 .btn-blue {
 	background-color: var(--blue);
 }
-
+.btn-close {
+	border:0px;
+	background-color: rgba(255, 255, 255, 0.39);
+	font-weight: bold;
+	font-size: large;
+    padding: 0px 5px;
+}
+.btn-close:hover {
+	cursor: pointer;
+	color: #8c8c8c;
+}
 /*Form Style*/
 .form-input {
 	font-size: 15px;
 	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-light);
 }
 .form-input:focus {
 	outline-width: 0px;
+	border-color: var(--blue);
 }
 input.form-input {
-	border: 0px;
-	border-bottom: 1px solid var(--color-light);
+	border-width: 0px;
+	border-bottom-width: 1px;
 	padding-top: var(--middle-size);
 	padding-bottom: var(--middle-size);
 }
-input.form-input:focus, textarea.form-input:focus {
-	border-color: var(--blue);
-}
-input[type=checkbox] {
-	margin: 0px;
-	margin-right: var(--half-size);
-}
-input[type=checkbox]:hover {
-	cursor: pointer;
-}
 textarea.form-input {
-	padding: var(--middle-size);
-	border:1px solid var(--color-light);
 	min-width: 100%;
 	max-width: 100%;
 	font-family: inherit;
 }
-label {
+select.form-input {
+	padding: var(--middle-size);
+}
+textarea.form-input {
+	padding: var(--half-size);
+}
+
+input[type=checkbox] {
+	margin: 0px;
+	margin-right: var(--middle-size);
+}
+input[type=checkbox]:hover, label {
 	cursor: pointer;
 }
 
@@ -271,16 +284,4 @@ label {
 .notif {
 	padding: var(--half-size) var(--full-size);
 	width: 100%;
-}
-.notif-green {
-	background-color: var(--green);
-}
-.notif-blue {
-	background-color: var(--blue);
-}
-.notif-yellow {
-	background-color: var(--yellow);
-}
-.notif-red {
-	background-color: var(--red);
 }
