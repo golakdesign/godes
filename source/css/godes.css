@@ -10,6 +10,7 @@
 	--lightblue: #30e5ff;
 	--green: #10f227;
 	--blue: #00a4ff;
+	--gray: gray;
 
 	--color-light: #e0e0e0;
 	--color-dark: gray;
@@ -150,7 +151,7 @@ html, body {
 	display: table;
     content: " ";
 }
-.sec-1, .sec-2, .sec-3, .sec-4, .sec-5, .sec-6, .sec-7, .sec-7, .sec-8, .sec-9, .sec-10 {
+.sec-1, .sec-2, .sec-3, .sec-4, .sec-5, .sec-6, .sec-7, .sec-7, .sec-8, .sec-9, .sec-10, .sec-even-1, .sec-even-2, .sec-even-3, .sec-even-4, .sec-even-5, .sec-even-6, .sec-even-7, .sec-even-8, .sec-even-9, .sec-even-10, .sec-even-11, .sec-even-12 {
 	position: relative;
 	float: left;
 	min-height: 1px;
