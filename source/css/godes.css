@@ -8,7 +8,7 @@
 	--pink: #ff3277;
 	--yellow: #ffe32f;
 	--lightblue: #30e5ff;
-	--green: #4cff4f;
+	--green: #10f227;
 	--blue: #00a4ff;
 
 	--color-light: #e0e0e0;
@@ -186,6 +186,43 @@ html, body {
 }
 .sec-10 {
 	width: 100%;
+}
+
+.sec-even-1 {
+	width: 8.333333333333333%
+}
+.sec-even-2 {
+	width: 16.66666666666667%
+}
+.sec-even-3 {
+	width: 25%
+}
+.sec-even-4 {
+	width: 33.33333333333333%
+}
+.sec-even-5 {
+	width: 41.66666666666667%
+}
+.sec-even-6 {
+	width: 50%
+}
+.sec-even-7 {
+	width: 58.33333333333334%
+}
+.sec-even-8 {
+	width: 66.66666666666667%
+}
+.sec-even-9 {
+	width: 75.00000000000002%
+}
+.sec-even-10 {
+	width: 83.33333333333333%
+}
+.sec-even-11 {
+	width: 91.66666666666666%
+}
+.sec-even-12 {
+	width: 100%
 }
 
 /*Color Style*/
