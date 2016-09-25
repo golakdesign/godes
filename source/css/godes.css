@@ -241,6 +241,16 @@ html, body {
 	border-bottom-color: var(--blue);
 	border-bottom-style: solid;
 }
+.border-top-red {
+	border-top-width: 1px;
+	border-top-color: var(--red);
+	border-top-style: solid;
+}
+.border-bottom-red {
+	border-bottom-width: 1px;
+	border-bottom-color: var(--red);
+	border-bottom-style: solid;
+}
 
 /*Text Style*/
 h1, h2, h3, h4, h5, h6, p {
@@ -375,7 +385,6 @@ input[type=checkbox]:hover, label {
 /*Board Style*/
 .board-header {
 	font-weight: bold;
-	font-style: 17px;
 }
 .board-body {
 	padding: var(--full-size);
