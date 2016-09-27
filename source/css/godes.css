@@ -6,14 +6,14 @@
 :root {
 	--red: #ff325a;
 	--pink: #ff3277;
-	--yellow: #ffe32f;
-	--lightblue: #30e5ff;
+	--yellow: #FFD600;/*--yellow: #ffe32f;*/
+	--lightblue: #40C4FF;/*--lightblue: #30e5ff;*/
 	--green: #10f227;
 	--blue: #00a4ff;
 	--gray: gray;
 
 	--color-light: #e0e0e0;
-	--color-dark: gray;
+	--color-dark: #2F323B;
 
 	--xxfull-size: 80px;
 	--xfull-size: 40px;
@@ -30,7 +30,6 @@ html, body {
 	font-family: roboto;
 	font-size: 15px;
 }
-
 * {
 	box-sizing: border-box;
 }
@@ -88,6 +87,9 @@ html, body {
 	padding-right: var(--full-size);
 	padding-left: var(--full-size);
 }
+.pad-bottom-full {
+	padding-bottom: var(--full-size);
+}
 .pad-top-half {
 	padding-top: var(--half-size);
 }
@@ -111,6 +113,9 @@ html, body {
 .pad-left-no {
 	padding-left:0px !important;
 }
+.pad-right-no {
+	padding-right:0px !important;
+}
 /*Element Style*/
 .center-thing {
 	margin: 0;
@@ -120,7 +125,9 @@ html, body {
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
-
+.flow-hidden {
+	overflow: hidden;
+}
 /*Element Align Style*/
 .set-left {
 	float: left;
@@ -245,7 +252,9 @@ html, body {
 .bg-blue {
 	background-color: var(--blue);
 }
-
+.bg-dark {
+	background-color: var(--color-dark);
+}
 .border-red, .border-pink, .border-yellow, .border-lightblue, .border-green, .border-blue {
     border-width: 1px;
     border-style: solid;
@@ -360,6 +369,28 @@ hr.dash {
 .btn:hover {
 	cursor: pointer;
 	opacity: 0.85;
+}
+.btn-rounded {
+	border-radius: var(--full-size);
+}
+.btn-circle {
+	display: inline-block;
+	border:0px;
+	font-size: 15px;
+	height: var(--xfull-size);
+	width: var(--xfull-size);
+	border-radius: 100%;
+	position: relative;
+}
+.btn-circle:hover {
+	cursor: pointer;
+}
+.btn-circle:focus {
+	border:0px;
+	outline: 1px;
+}
+.btn-circle span {
+
 }
 .btn-full {
 	width: 100%;
@@ -497,6 +528,15 @@ input[type=checkbox]:hover, label {
 a {
 	color: var(--blue);
 	text-decoration: none;
+}
+a:hover {
+	opacity: 0.7;
+}
+
+.ul-a {
+	margin: 0px;
+    padding: 0px;
+    list-style-type: none;
 }
 /*Label Style*/
 .label {
