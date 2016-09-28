@@ -2,7 +2,6 @@
     font-family: roboto;
     src: url(../font/Roboto-Regular.ttf);
 }
-
 :root {
 	--red: #ff325a;
 	--pink: #ff3277;
@@ -148,12 +147,12 @@ html, body {
 	margin-left: var(--min-full-size);
 	margin-right: var(--min-full-size);
 }
-.row:after {
+.row::after {
 	clear: both;
 	display: table;
     content: " ";
 }
-.row:before {
+.row::before {
 	clear: both;
 	display: table;
     content: " ";
@@ -437,11 +436,12 @@ textarea.form-input {
 	padding: var(--half-size);
 }
 
-input[type=checkbox] {
-	margin: 0px;
-	margin-right: var(--middle-size);
+input[type=checkbox], input[type=radio] {
+    position: absolute;
+    margin: 3px 0px;
+    left: 0px;
 }
-input[type=checkbox]:hover, label {
+input[type=checkbox]:hover, input[type=radio]:hover, label {
 	cursor: pointer;
 }
 
@@ -555,4 +555,23 @@ a:hover {
 }
 .btn .bg-circle {
 	background-color: white;
+}
+
+/*Hover Style*/
+*[data-title]{
+	position: relative;
+}
+*[data-title]:hover:after {
+  content: attr(data-title);
+  padding: var(--xsmall-size) var(--middle-size);
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 9999999999;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-color: white;
 }

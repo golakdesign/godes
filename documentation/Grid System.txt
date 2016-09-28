@@ -1,0 +1,13 @@
+Golak Design Grid
+
+We are using even and odd grid and flex grid
+even have 12 Grid
+odd have 10 grid
+flex for automatic grid system
+
+To use Grid, Set section first with class:
+1. Section-full
+2. Section-box
+
+To give a row line in grid even and odd use:
+.row

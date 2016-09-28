@@ -1,0 +1,35 @@
+/*Variable Root*/
+:root {
+	--red: #ff325a;
+	--pink: #ff3277;
+	--yellow: #FFD600;/*--yellow: #ffe32f;*/
+	--lightblue: #40C4FF;/*--lightblue: #30e5ff;*/
+	--green: #10f227;
+	--blue: #00a4ff;
+	--gray: gray;
+
+	--color-light: #e0e0e0;
+	--color-dark: #2F323B;
+
+	--xxfull-size: 80px;
+	--xfull-size: 40px;
+	--full-size: 20px;
+	--half-size: 10px;
+	--middle-size: 7px;
+	--small-size: 5px;
+	--xsmall-size: 3px;
+	--min-full-size: -20px;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Regular.ttf);
+}
+html, body {
+	margin: 0px;
+	font-family: roboto;
+	font-size: 15px;
+}
+* {
+	box-sizing: border-box;
+}
