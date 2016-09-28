@@ -515,11 +515,11 @@ input[type=checkbox]:hover, label {
 .breadcrumb  li.active {
 	color: var(--color-dark);
 }
-.breadcrumb > li:first-child:before {
+.breadcrumb > li:first-child::before {
 	content: '';
 	margin-right: 0px;
 }
-.breadcrumb > li:before {
+.breadcrumb > li::before {
 	margin-right: var(--middle-size);
 	content: '>';
 }
