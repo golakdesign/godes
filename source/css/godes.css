@@ -13,11 +13,7 @@
 	--gray: gray;
 
 	--color-light: #e0e0e0;
-<<<<<<< HEAD
-	--color-dark: gray;
-=======
 	--color-dark: #2F323B;
->>>>>>> new
 
 	--xxfull-size: 80px;
 	--xfull-size: 40px;
@@ -76,56 +72,6 @@ html, body {
 .m-bottom-half {
 	margin-bottom: var(--half-size);
 }
-<<<<<<< HEAD
-
-.m-left-middle {
-	margin-left: var(--middle-size);
-}
-
-.pad-left-full {
-	padding-left: var(--full-size);
-}
-.pad-right-full {
-	padding-right: var(--full-size);
-}
-.pad-lr-full {
-	padding-right: var(--full-size);
-	padding-left: var(--full-size);
-}
-.pad-top-half {
-	padding-top: var(--half-size);
-}
-.pad-bottom-half {
-	padding-top: var(--half-size);
-}
-.pad-left-half {
-	padding-left: var(--half-size);
-}
-.pad-right-half {
-	padding-right: var(--half-size);
-}
-.pad-tb-half {
-	padding-top: var(--half-size);
-	padding-bottom: var(--half-size);
-}
-.pad-tb-full {
-	padding-top: var(--full-size);
-	padding-bottom: var(--full-size);
-}
-.pad-left-no {
-	padding-left:0px !important;
-}
-/*Element Style*/
-.center-thing {
-	margin: 0;
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-=======
->>>>>>> new
 
 .m-left-middle {
 	margin-left: var(--middle-size);
@@ -353,40 +299,6 @@ html, body {
 	border-bottom-style: solid;
 }
 
-.border-red, .border-pink, .border-yellow, .border-lightblue, .border-green, .border-blue {
-    border-width: 1px;
-    border-style: solid;
-}
-.border-red {
-	border-color: var(--red);
-}
-.border-pink {
-	border-color: var(--pink);
-}
-.border-yellow {
-	border-color: var(--yellow); 
-}
-.border-lightblue {
-	border-color: var(--lightblue);
-}
-.border-green {
-	border-color: var(--green);
-}
-.border-blue {
-	border-color: var(--blue);
-}
-
-.border-top-blue {
-	border-top-width: 1px;
-	border-top-color: var(--blue);
-	border-top-style: solid;
-}
-.border-bottom-blue {
-	border-bottom-width: 1px;
-	border-bottom-color: var(--blue);
-	border-bottom-style: solid;
-}
-
 /*Text Style*/
 h1, h2, h3, h4, h5, h6, p {
 	margin-top: var(--half-size);
@@ -458,8 +370,6 @@ hr.dash {
 	cursor: pointer;
 	opacity: 0.85;
 }
-<<<<<<< HEAD
-=======
 .btn-rounded {
 	border-radius: var(--full-size);
 }
@@ -482,7 +392,6 @@ hr.dash {
 .btn-circle span {
 
 }
->>>>>>> new
 .btn-full {
 	width: 100%;
 }
@@ -545,10 +454,6 @@ input[type=checkbox]:hover, label {
 /*Board Style*/
 .board-header {
 	font-weight: bold;
-<<<<<<< HEAD
-	font-style: 17px;
-=======
->>>>>>> new
 }
 .board-body {
 	padding: var(--full-size);
@@ -610,19 +515,11 @@ input[type=checkbox]:hover, label {
 .breadcrumb  li.active {
 	color: var(--color-dark);
 }
-<<<<<<< HEAD
-.breadcrumb > li:first-child:before {
-	content: '';
-	margin-right: 0px;
-}
-.breadcrumb > li:before {
-=======
 .breadcrumb > li:first-child::before {
 	content: '';
 	margin-right: 0px;
 }
 .breadcrumb > li::before {
->>>>>>> new
 	margin-right: var(--middle-size);
 	content: '>';
 }
@@ -632,8 +529,6 @@ a {
 	color: var(--blue);
 	text-decoration: none;
 }
-<<<<<<< HEAD
-=======
 a:hover {
 	opacity: 0.7;
 }
@@ -643,7 +538,6 @@ a:hover {
     padding: 0px;
     list-style-type: none;
 }
->>>>>>> new
 /*Label Style*/
 .label {
 	padding: var(--xsmall-size) var(--small-size);
@@ -661,8 +555,4 @@ a:hover {
 }
 .btn .bg-circle {
 	background-color: white;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> new
