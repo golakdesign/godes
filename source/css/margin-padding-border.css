@@ -1,3 +1,111 @@
+:root {
+	--xx-large-size: 80;
+	--x-large-size: calc(var(--xx-large-size) / 2); /*40*/
+	--large-size: calc(var(--x-large-size) / 2); /*20*/
+	--medium-size: calc(var(--large-size) / 2); /*10*/
+	--small-size: calc(var(--medium-size) / 2); /*5*/
+	--x-small-size: 3; /*3*/
+	--xx-small-size: 1; /*1*/
+
+	--xx-large: calc(var(--xx-large-size) * 1px);
+	--x-large: calc(var(--x-large-size) *1px);
+	--large: calc(var(--large-size) *1px);
+	--medium: calc(var(--medium-size) *1px);
+	--small: calc(var(--small-size) *1px);
+	--x-small: calc(var(--x-small-size) *1px);
+	--xx-small: calc(var(--xx-small-size) *1px);
+}
+.m-top-xx-large {
+	margin-top: var(--xx-large);
+}
+.m-top-x-large {
+	margin-top: var(--x-large);
+}
+.m-top-large {
+	margin-top: var(--large);
+}
+.m-top-medium {
+	margin-top: var(--medium);
+}
+.m-top-small {
+	margin-top: var(--small);
+}
+.m-top-x-small {
+	margin-top: var(--x-small);
+}
+.m-top-xx-small {
+	margin-top: var(--xx-small);
+}
+
+
+.m-left-xx-large {
+	margin-left: var(--xx-large);
+}
+.m-left-x-large {
+	margin-left: var(--x-large);
+}
+.m-left-large {
+	margin-left: var(--large);
+}
+.m-left-medium {
+	margin-left: var(--medium);
+}
+.m-left-small {
+	margin-left: var(--small);
+}
+.m-left-x-small {
+	margin-left: var(--x-small);
+}
+.m-left-xx-small {
+	margin-left: var(--xx-small);
+}
+
+
+.m-right-xx-large {
+	margin-right: var(--xx-large);
+}
+.m-right-x-large {
+	margin-right: var(--x-large);
+}
+.m-right-large {
+	margin-right: var(--large);
+}
+.m-right-medium {
+	margin-right: var(--medium);
+}
+.m-right-small {
+	margin-right: var(--small);
+}
+.m-right-x-small {
+	margin-right: var(--x-small);
+}
+.m-right-xx-small {
+	margin-right: var(--xx-small);
+}
+
+
+.m-bottom-xx-large {
+	margin-bottom: var(--xx-large);
+}
+.m-bottom-x-large {
+	margin-bottom: var(--x-large);
+}
+.m-bottom-large {
+	margin-bottom: var(--large);
+}
+.m-bottom-medium {
+	margin-bottom: var(--medium);
+}
+.m-bottom-small {
+	margin-bottom: var(--small);
+}
+.m-bottom-x-small {
+	margin-bottom: var(--x-small);
+}
+.m-bottom-xx-small {
+	margin-bottom: var(--xx-small);
+}
+
 /*Margin Style*/
 .m-top-xfull {
 	margin-top: var(--xfull-size);
