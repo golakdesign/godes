@@ -1,0 +1,60 @@
+h1, h2, h3, h4, h5, h6 {
+	padding-bottom: var(--medium);
+	padding-top: var(--medium);
+	margin: 0px;
+}
+h4, h5, h6 {
+	font-weight: normal;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	color: gray;
+}
+p {
+	margin:0px;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-justify {
+	text-align: justify;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+.bold {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+.underline {
+	text-decoration: underline;
+}
+
+
+hr {
+	width: 100%;
+	border-top-width: 0px;
+	float: left;
+	border-color: var(--color-light);
+	margin-top: var(--medium);
+	margin-bottom: var(--medium);
+}
+hr.line {
+	border-style: solid;
+}
+hr.dash {
+	border-style: dashed;
+}

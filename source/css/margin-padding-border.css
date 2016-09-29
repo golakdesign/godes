@@ -430,6 +430,7 @@
 .b-all-x-small,
 .b-all-xx-small {
 	border-style: solid;
+    border-width: 0px;
 }
 
 .b-all-xx-large {
