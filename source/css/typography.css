@@ -47,10 +47,19 @@ p {
 hr {
 	width: 100%;
 	border-top-width: 0px;
-	float: left;
 	border-color: var(--color-light);
-	margin-top: var(--medium);
-	margin-bottom: var(--medium);
+	display: block;
+	overflow: hidden;
+}
+hr::after {
+	clear: both;
+	display: table;
+    content: " ";
+}
+hr::before {
+	clear: both;
+	display: table;
+    content: " ";
 }
 hr.line {
 	border-style: solid;

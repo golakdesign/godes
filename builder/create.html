@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate Border-color</title>
+	<link rel="stylesheet" type="text/css" href="../source/css/grid-system.css">
+</head>
+<body>
+	<button onclick="create('top')">Top</button>
+	<button onclick="create('left')">Left</button>
+	<button onclick="create('right')">Right</button>
+	<button onclick="create('bottom')">Bottom</button>
+	<button onclick="create_all()">All</button>
+	<textarea id="generate-code" class="grid--12" rows="20"></textarea>
+	<p id="total-rows"></p>
+</body>
+</html>
+<script type="text/javascript">
+	function create(id) {
+		var a = ["red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange",  "deep-orange", "brown", "grey", "blue-grey", "black", "white"];
+		var b = "";
+		var c = 0;
+		var max_color = 13;
+		for(var i = 0; i < a.length; i++) {
+			if (a[i] == "brown" || a[i] == "grey" || a[i] == "blue-grey") {
+				max_color = 9;
+			}
+			else if (a[i] == "black" || a[i] == "white") {
+				max_color = 0;
+			}
+			for(var j = 0; j <= max_color; j++) {
+				c+=1;
+				b += '.b-'+ id +'-'+ a[i]+'-'+ j +' {'+
+				         'border-'+id+'-color: var(--'+ a[i] +'-'+ j +');'+
+				     '}\n';
+			 }
+		}
+
+		document.getElementById('generate-code').value = b;
+		document.getElementById('total-rows').innerHTML = c;
+	}
+
+	function create_all() {
+		var pos = ["top", "left", "right", "bottom"];
+		var a = ["red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange",  "deep-orange", "brown", "grey", "blue-grey", "black", "white"];
+		var b = "";
+		var c = 0;
+
+		for (var z = 0; z < pos.length; z++) {
+			var max_color = 13;
+			for(var i = 0; i < a.length; i++) {
+				if (a[i] == "brown" || a[i] == "grey" || a[i] == "blue-grey") {
+					max_color = 9;
+				}
+				else if (a[i] == "black" || a[i] == "white") {
+					max_color = 0;
+				}
+				for(var j = 0; j <= max_color; j++) {
+					c += 1;
+					if (a[i] == "black" || a[i] == "white") {
+						b += '.b-'+ pos[z] +'-'+ a[i]+'{'+
+					         'border-'+ pos[z] +'-color: var(--'+ a[i] +');'+
+					    '}\n';
+					}
+					else {
+						b += '.b-'+ pos[z] +'-'+ a[i]+'-'+ j +' {'+
+					         'border-'+ pos[z] +'-color: var(--'+ a[i] +'-'+ j +');'+
+					    '}\n';
+					}
+				 }
+			}
+		}
+		document.getElementById('generate-code').value = b;
+		document.getElementById('total-rows').innerHTML = c;
+	}
+</script>

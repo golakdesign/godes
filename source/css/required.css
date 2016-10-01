@@ -1,24 +1,22 @@
 /*Variable Root*/
 :root {
-	--red: #ff325a;
-	--pink: #ff3277;
-	--yellow: #FFD600;/*--yellow: #ffe32f;*/
-	--lightblue: #40C4FF;/*--lightblue: #30e5ff;*/
-	--green: #10f227;
-	--blue: #00a4ff;
-	--gray: gray;
+	--xx-large-size: 80;
+	--x-large-size: calc(var(--xx-large-size) / 2); /*40*/
+	--large-size: calc(var(--x-large-size) / 2); /*20*/
+	--medium-size: calc(var(--large-size) / 2); /*10*/
+	--small-size: calc(var(--medium-size) / 2); /*5*/
+	--x-small-size: 3; /*3*/
+	--xx-small-size: 1; /*1*/
 
-	--color-light: #e0e0e0;
-	--color-dark: #2F323B;
+	--xx-large: calc(var(--xx-large-size) * 1px);
+	--x-large: calc(var(--x-large-size) *1px);
+	--large: calc(var(--large-size) *1px);
+	--medium: calc(var(--medium-size) *1px);
+	--small: calc(var(--small-size) *1px);
+	--x-small: calc(var(--x-small-size) *1px);
+	--xx-small: calc(var(--xx-small-size) *1px);
 
-	--xxfull-size: 80px;
-	--xfull-size: 40px;
-	--full-size: 20px;
-	--half-size: 10px;
-	--middle-size: 7px;
-	--small-size: 5px;
-	--xsmall-size: 3px;
-	--min-full-size: -20px;
+	--min-large: calc(var(--large-size) * -1px);
 }
 
 @font-face {

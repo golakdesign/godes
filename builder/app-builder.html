@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>App Builder</title>
+	<link rel="stylesheet" type="text/css" href="../source/css/required.css">
+	<link rel="stylesheet" type="text/css" href="../source/css/grid-system.css">
+	<link rel="stylesheet" type="text/css" href="../source/css/margin-padding-border.css">
+	<link rel="stylesheet" type="text/css" href="../source/css/color.css">
+	<link rel="stylesheet" type="text/css" href="../source/css/border-color.css">
+	<link rel="stylesheet" type="text/css" href="../source/css/typography.css">
+	<style type="text/css">
+		.section-box {
+			min-height: 800px;
+			border: 2px solid lightblue;
+			box-shadow: 0px 0px 18px #9a9a9a;
+		}
+		.section {
+			overflow: hidden;
+		}
+		.item-content {
+			width: 50px;
+			height: 50px;
+			display: block;
+			position: relative;
+			float: left;
+		}
+		.item-content:hover {
+			cursor: pointer;
+			background-color: white;
+		}
+	</style>
+</head>
+<body class="p-bottom-large">
+	<div class="section p-tb-large bg-blue-3">
+		<div class="grid--4">
+			<div class="item-content">
+				<h1 id="h1" onclick="get_el(this.id, 0)">h1</h1>
+			</div>
+			<span class="item-content">
+				<h2 id="h2" onclick="get_el(this.id, 0)">h2</h2>
+			</span>
+			<span class="item-content">
+				<h3 id="h3" onclick="get_el(this.id, 0)">h3</h3>
+			</span>
+			<span class="item-content">
+				<h4 id="h4" onclick="get_el(this.id, 0)">h4</h4>
+			</span>
+			<span class="item-content">
+				<h5 id="h5" onclick="get_el(this.id, 0)">h5</h5>
+			</span>
+			<span class="item-content">
+				<h6 id="h6" onclick="get_el(this.id, 0)">h6</h6>
+			</span>
+			<span class="item-content">
+				<p id="p" onclick="get_el(this.id, 0)">Body Copy</h6>
+			</span>
+			<span class="item-content">
+				<p class="lowercase" id="lowercase" onclick="get_el(this.id, 0)">Lowercase</p>
+			</span>
+		</div>
+	</div>
+	<div class="section-box p-all-large m-top-large" id="page-builder" onclick="paste_el(this.id)"></div>
+</body>
+<script type="text/javascript">
+
+	var element = "";
+	var element_id = "";
+	function get_el(id, count) {
+		var itm = document.getElementById(id);
+		count += 1;
+		itm.setAttribute("id", id+"-copy-"+count);
+		itm.setAttribute("contenteditable", "true");
+		itm.setAttribute("onclick", "paste_el(this.id)");
+		element = itm.cloneNode(true);
+		itm.setAttribute("id", "h1");
+		itm.removeAttribute("contenteditable");
+		itm.setAttribute("onclick", "get_el(this.id, "+count+")");
+	}
+
+	function paste_el(id) {
+		document.getElementById(id).appendChild(element);
+		element = "";
+	}
+
+</script>
+</html>

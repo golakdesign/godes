@@ -1,22 +1,3 @@
-:root {
-	--xx-large-size: 80;
-	--x-large-size: calc(var(--xx-large-size) / 2); /*40*/
-	--large-size: calc(var(--x-large-size) / 2); /*20*/
-	--medium-size: calc(var(--large-size) / 2); /*10*/
-	--small-size: calc(var(--medium-size) / 2); /*5*/
-	--x-small-size: 3; /*3*/
-	--xx-small-size: 1; /*1*/
-
-	--xx-large: calc(var(--xx-large-size) * 1px);
-	--x-large: calc(var(--x-large-size) *1px);
-	--large: calc(var(--large-size) *1px);
-	--medium: calc(var(--medium-size) *1px);
-	--small: calc(var(--small-size) *1px);
-	--x-small: calc(var(--x-small-size) *1px);
-	--xx-small: calc(var(--xx-small-size) *1px);
-}
-
-
 /*Margin*/
 .m-all-xx-large {
 	margin: var(--xx-large);
@@ -392,6 +373,10 @@
 .p-bottom-no {
 	padding-bottom: 0px !important;
 }
+.p-lr-no {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
 
 /*Border*/
 .b-top-xx-large, 
@@ -431,6 +416,7 @@
 .b-all-xx-small {
 	border-style: solid;
     border-width: 0px;
+    border-color: grey;
 }
 
 .b-all-xx-large {
