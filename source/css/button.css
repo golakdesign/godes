@@ -1,0 +1,21 @@
+/*Button style*/
+.btn {
+	display: inline-block;
+	padding: var(--small) var(--large);
+	font-size: inherit;
+	border: 0px;
+	font-family: roboto;
+	margin: var(--xx-small);
+}
+.btn:hover {
+	box-shadow: 0px var(--xx-small) 0px #808080;
+	cursor: pointer;
+}
+.btn:focus {
+	outline: 0px;
+	box-shadow: 0px 0px 0px var(--xx-small) #808080;
+}
+
+.btn-rounded {
+	border-radius: var(--large);
+}
