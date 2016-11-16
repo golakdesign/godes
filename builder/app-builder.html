@@ -9,78 +9,283 @@
 	<link rel="stylesheet" type="text/css" href="../source/css/border-color.css">
 	<link rel="stylesheet" type="text/css" href="../source/css/typography.css">
 	<style type="text/css">
-		.section-box {
+		.box-code {
+			min-height: 300px;
+		}
+		.box-view {
 			min-height: 800px;
+		}
+		.box-view, .box-code {
 			border: 2px solid lightblue;
+			box-shadow: 0px 0px 18px #9a9a9a;
+		}
+		#page-builder *:hover {
 			box-shadow: 0px 0px 18px #9a9a9a;
 		}
 		.section {
 			overflow: hidden;
 		}
-		.item-content {
-			width: 50px;
-			height: 50px;
-			display: block;
-			position: relative;
-			float: left;
-		}
-		.item-content:hover {
+
+		button:hover {
 			cursor: pointer;
-			background-color: white;
+		}
+		button.active {
+
+		}
+		.text-code {
+			width: 100%;
+			max-width: 100%;
+			min-height: inherit;
+			max-height: inherit;
 		}
 	</style>
 </head>
 <body class="p-bottom-large">
-	<div class="section p-tb-large bg-blue-3">
-		<div class="grid--4">
-			<div class="item-content">
-				<h1 id="h1" onclick="get_el(this.id, 0)">h1</h1>
+	<div class="section bg-blue-4 p-lr-large p-tb-medium">
+		<p class="bold">App Builder</p>
+	</div>
+	<div class="section bg-blue-3 p-lr-large p-bottom-medium">
+		<button type="button" onclick="toggle_menu(1)">File</button>
+		<button type="button" onclick="toggle_menu(2)">Grid Design</button>
+		<button type="button" onclick="toggle_menu(3)">Typography</button>
+		<hr class="">
+	</div>
+	<div class="section p-all-large p-top-no bg-blue-3 toggle_menu" id="menu-1">
+		<div class="gd-sm-4">
+			<div class="row">
+				<p class="bold m-bottom-medium">Operation</p>
+				<button type="button">Save</button>
+				<button type="button" onclick="discard_file()">Discard</button>
 			</div>
-			<span class="item-content">
-				<h2 id="h2" onclick="get_el(this.id, 0)">h2</h2>
-			</span>
-			<span class="item-content">
-				<h3 id="h3" onclick="get_el(this.id, 0)">h3</h3>
-			</span>
-			<span class="item-content">
-				<h4 id="h4" onclick="get_el(this.id, 0)">h4</h4>
-			</span>
-			<span class="item-content">
-				<h5 id="h5" onclick="get_el(this.id, 0)">h5</h5>
-			</span>
-			<span class="item-content">
-				<h6 id="h6" onclick="get_el(this.id, 0)">h6</h6>
-			</span>
-			<span class="item-content">
-				<p id="p" onclick="get_el(this.id, 0)">Body Copy</h6>
-			</span>
-			<span class="item-content">
-				<p class="lowercase" id="lowercase" onclick="get_el(this.id, 0)">Lowercase</p>
-			</span>
 		</div>
 	</div>
-	<div class="section-box p-all-large m-top-large" id="page-builder" onclick="paste_el(this.id)"></div>
+	<div class="section p-all-large p-top-no bg-blue-3 toggle_menu" id="menu-2">
+		<div class="gd-sm-2">
+			<div class="row">
+				<p class="bold m-bottom-medium">Extra Small</p>
+				<button type="button" id="gd-xs-1" onclick="get_code_text('div', this.id)" data-class="gd-xs-1">1</button>
+				<button type="button" id="gd-xs-2" onclick="get_code_text('div', this.id)" data-class="gd-xs-2">2</button>
+				<button type="button" id="gd-xs-3" onclick="get_code_text('div', this.id)" data-class="gd-xs-3">3</button>
+				<button type="button" id="gd-xs-4" onclick="get_code_text('div', this.id)" data-class="gd-xs-4">4</button>
+				<button type="button" id="gd-xs-5" onclick="get_code_text('div', this.id)" data-class="gd-xs-5">5</button>
+				<button type="button" id="gd-xs-6" onclick="get_code_text('div', this.id)" data-class="gd-xs-6">6</button>
+				<button type="button" id="gd-xs-7" onclick="get_code_text('div', this.id)" data-class="gd-xs-7">7</button>
+				<button type="button" id="gd-xs-8" onclick="get_code_text('div', this.id)" data-class="gd-xs-8">8</button>
+				<button type="button" id="gd-xs-9" onclick="get_code_text('div', this.id)" data-class="gd-xs-9">9</button>
+				<button type="button" id="gd-xs-10" onclick="get_code_text('div', this.id)" data-class="gd-xs-10">10</button>
+				<button type="button" id="gd-xs-11" onclick="get_code_text('div', this.id)" data-class="gd-xs-11">11</button>
+				<button type="button" id="gd-xs-12" onclick="get_code_text('div', this.id)" data-class="gd-xs-12">12</button>
+			</div>
+		</div>
+		<div class="gd-sm-2">
+			<div class="row">
+				<p class="bold m-bottom-medium">Small</p>
+				<button type="button" id="gd-sm-1" onclick="get_code_text('div', this.id)" data-class="gd-sm-1">1</button>
+				<button type="button" id="gd-sm-2" onclick="get_code_text('div', this.id)" data-class="gd-sm-2">2</button>
+				<button type="button" id="gd-sm-3" onclick="get_code_text('div', this.id)" data-class="gd-sm-3">3</button>
+				<button type="button" id="gd-sm-4" onclick="get_code_text('div', this.id)" data-class="gd-sm-4">4</button>
+				<button type="button" id="gd-sm-5" onclick="get_code_text('div', this.id)" data-class="gd-sm-5">5</button>
+				<button type="button" id="gd-sm-6" onclick="get_code_text('div', this.id)" data-class="gd-sm-6">6</button>
+				<button type="button" id="gd-sm-7" onclick="get_code_text('div', this.id)" data-class="gd-sm-7">7</button>
+				<button type="button" id="gd-sm-8" onclick="get_code_text('div', this.id)" data-class="gd-sm-8">8</button>
+				<button type="button" id="gd-sm-9" onclick="get_code_text('div', this.id)" data-class="gd-sm-9">9</button>
+				<button type="button" id="gd-sm-10" onclick="get_code_text('div', this.id)" data-class="gd-sm-10">10</button>
+				<button type="button" id="gd-sm-11" onclick="get_code_text('div', this.id)" data-class="gd-sm-11">11</button>
+				<button type="button" id="gd-sm-12" onclick="get_code_text('div', this.id)" data-class="gd-sm-12">12</button>
+			</div>
+		</div>
+		<div class="gd-sm-2">
+			<div class="row">
+				<p class="bold m-bottom-medium">Medium</p>
+				<button type="button" id="gd-md-1" onclick="get_code_text('div', this.id)" data-class="gd-md-1">1</button>
+				<button type="button" id="gd-md-2" onclick="get_code_text('div', this.id)" data-class="gd-md-2">2</button>
+				<button type="button" id="gd-md-3" onclick="get_code_text('div', this.id)" data-class="gd-md-3">3</button>
+				<button type="button" id="gd-md-4" onclick="get_code_text('div', this.id)" data-class="gd-md-4">4</button>
+				<button type="button" id="gd-md-5" onclick="get_code_text('div', this.id)" data-class="gd-md-5">5</button>
+				<button type="button" id="gd-md-6" onclick="get_code_text('div', this.id)" data-class="gd-md-6">6</button>
+				<button type="button" id="gd-md-7" onclick="get_code_text('div', this.id)" data-class="gd-md-7">7</button>
+				<button type="button" id="gd-md-8" onclick="get_code_text('div', this.id)" data-class="gd-md-8">8</button>
+				<button type="button" id="gd-md-9" onclick="get_code_text('div', this.id)" data-class="gd-md-9">9</button>
+				<button type="button" id="gd-md-10" onclick="get_code_text('div', this.id)" data-class="gd-md-10">10</button>
+				<button type="button" id="gd-md-11" onclick="get_code_text('div', this.id)" data-class="gd-md-11">11</button>
+				<button type="button" id="gd-md-12" onclick="get_code_text('div', this.id)" data-class="gd-md-12">12</button>
+			</div>
+		</div>
+		<div class="gd-sm-2">
+			<div class="row">
+				<p class="bold m-bottom-medium">Large</p>
+				<button type="button" id="gd-lg-1" onclick="get_code_text('div', this.id)" data-class="gd-lg-1">1</button>
+				<button type="button" id="gd-lg-2" onclick="get_code_text('div', this.id)" data-class="gd-lg-2">2</button>
+				<button type="button" id="gd-lg-3" onclick="get_code_text('div', this.id)" data-class="gd-lg-3">3</button>
+				<button type="button" id="gd-lg-4" onclick="get_code_text('div', this.id)" data-class="gd-lg-4">4</button>
+				<button type="button" id="gd-lg-5" onclick="get_code_text('div', this.id)" data-class="gd-lg-5">5</button>
+				<button type="button" id="gd-lg-6" onclick="get_code_text('div', this.id)" data-class="gd-lg-6">6</button>
+				<button type="button" id="gd-lg-7" onclick="get_code_text('div', this.id)" data-class="gd-lg-7">7</button>
+				<button type="button" id="gd-lg-8" onclick="get_code_text('div', this.id)" data-class="gd-lg-8">8</button>
+				<button type="button" id="gd-lg-9" onclick="get_code_text('div', this.id)" data-class="gd-lg-9">9</button>
+				<button type="button" id="gd-lg-10" onclick="get_code_text('div', this.id)" data-class="gd-lg-10">10</button>
+				<button type="button" id="gd-lg-11" onclick="get_code_text('div', this.id)" data-class="gd-lg-11">11</button>
+				<button type="button" id="gd-lg-12" onclick="get_code_text('div', this.id)" data-class="gd-lg-12">12</button>
+			</div>
+		</div>
+	</div>
+	<div class="section p-all-large p-top-medium bg-blue-3 toggle_menu" id="menu-3">
+		<div class="gd-sm-4">
+			<div class="row">
+				<p class="bold m-bottom-medium">Headings</p>
+				<button type="button" id="h1" onclick="get_code_text('h1', this.id)">h1</button>
+				<button type="button" id="h2" onclick="get_code_text('h2', this.id)">h2</button>
+				<button type="button" id="h3" onclick="get_code_text('h3', this.id)">h3</button>
+				<button type="button" id="h4" onclick="get_code_text('h4', this.id)">h4</button>
+				<button type="button" id="h5" onclick="get_code_text('h5', this.id)">h5</button>
+				<button type="button" id="h6" onclick="get_code_text('h6', this.id)">h6</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section-box box-code m-top-large" id="html-code">
+		<textarea class="text-code bg-blue-grey-8" id="text-code" onkeydown="press_code()" onkeyup="press_code()" spellcheck="false"></textarea>
+	</div>
+	<div class="section-box box-view p-all-large m-top-large" id="page-builder"></div>
 </body>
+
+<!-- Add jquery -->
+<script type="text/javascript" src="../source/js/jquery-3.1.js"></script>
 <script type="text/javascript">
 
 	var element = "";
-	var element_id = "";
-	function get_el(id, count) {
-		var itm = document.getElementById(id);
-		count += 1;
-		itm.setAttribute("id", id+"-copy-"+count);
-		itm.setAttribute("contenteditable", "true");
-		itm.setAttribute("onclick", "paste_el(this.id)");
-		element = itm.cloneNode(true);
-		itm.setAttribute("id", "h1");
-		itm.removeAttribute("contenteditable");
-		itm.setAttribute("onclick", "get_el(this.id, "+count+")");
+	$(document).ready(function(){
+
+	});
+	// function get_el(id, count) {
+	// 	var itm = document.getElementById(id);
+	// 	count += 1;
+	// 	itm.setAttribute("id", id+"-copy-"+count);
+	// 	itm.setAttribute("contenteditable", "true");
+	// 	itm.setAttribute("onclick", "paste_el(this.id)");
+	// 	element = itm.cloneNode(true);
+	// 	itm.setAttribute("id", id);
+	// 	itm.removeAttribute("contenteditable");
+	// 	itm.setAttribute("onclick", "get_el(this.id, "+count+")");
+	// }
+
+	// function paste_el(id) {
+	// 	document.getElementById(id).appendChild(element);
+	// 	element = "";
+	// 	code_editor();
+	// }
+
+	toggle_menu(2);
+	function toggle_menu(id) {
+		$(".toggle_menu").hide();
+		$("#menu-"+id).show();
 	}
 
-	function paste_el(id) {
-		document.getElementById(id).appendChild(element);
-		element = "";
+	function code_editor() {
+		$(".text-code").val($("#page-builder").html());
 	}
 
+	function press_code() {
+		$("#page-builder").html($(".text-code").val());
+	}
+
+	function get_code_text(tag, id) {
+		var count_element = $("#page-builder ." + id).length;
+		if(count_element == 0) {
+			count_element = $("#page-builder " + id).length;
+		}
+		count_element += 1;
+
+		var base_element = $("#"+id);
+
+		var html_class = base_element.attr("data-class");
+		if (html_class == undefined) {
+			html_class = "";
+		} else {
+			html_class = 'class="'+html_class+'"';
+		}
+
+		var html_tag = '<'+tag+' id="'+id+'-'+count_element+'" '+html_class+'>'+tag+'</'+tag+'>';
+
+		insertAtCaret(html_tag);
+	}
+
+	function discard_file(){
+		$("#text-code").val("").focus();
+		$("#page-builder").html("");
+	}
+
+
+	function insertAtCaret(text) {
+		var txtarea = document.getElementById("text-code");
+		var scrollPos = txtarea.scrollTop;
+		var strPos = 0;
+		var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ? 
+			"ff" : (document.selection ? "ie" : false ) );
+		if (br == "ie") { 
+			txtarea.focus();
+			var range = document.selection.createRange();
+			range.moveStart ('character', -txtarea.value.length);
+			strPos = range.text.length;
+		}
+		else if (br == "ff") strPos = txtarea.selectionStart;
+		
+		var front = (txtarea.value).substring(0,strPos);  
+		var back = (txtarea.value).substring(strPos,txtarea.value.length); 
+
+		//alert(back.substring(0,2));
+		var after_back = back.substring(0,2);
+		var last_front = front.substring(front.length - 1);
+
+		if(front.length > 0 && back.length > 0 && after_back == "</") {
+			txtarea.value=front+"\n\t"+text+"\n"+back;
+			strPos = strPos + text.length + 4;
+		}
+		else if (front.length > 0 && back.length == 0 || after_back == "\n<") {
+			txtarea.value=front+"\n"+text+back;
+		}
+		else {
+			txtarea.value=front+text+back;
+			strPos = strPos + text.length;
+		}
+
+		if (br == "ie") { 
+			txtarea.focus();
+			var range = document.selection.createRange();
+			range.moveStart ('character', -txtarea.value.length);
+			range.moveStart ('character', strPos);
+			range.moveEnd ('character', 0);
+			range.select();
+		}
+		else if (br == "ff") {
+			txtarea.selectionStart = strPos;
+			txtarea.selectionEnd = strPos;
+			txtarea.focus();
+		}
+		txtarea.scrollTop = scrollPos;
+
+		press_code();
+	}
+
+	$("#text-code").keydown(function(e) {
+	    if(e.keyCode === 9) { // tab was pressed
+	        // get caret position/selection
+	        var start = this.selectionStart;
+	            end = this.selectionEnd;
+
+	        var $this = $(this);
+
+	        // set textarea value to: text before caret + tab + text after caret
+	        $this.val($this.val().substring(0, start)
+	                    + "\t"
+	                    + $this.val().substring(end));
+
+	        // put caret at right position again
+	        this.selectionStart = this.selectionEnd = start + 1;
+
+	        return false;
+	    }
+	});
 </script>
 </html>

@@ -17,6 +17,7 @@
 	--xx-small: calc(var(--xx-small-size) *1px);
 
 	--min-large: calc(var(--large-size) * -1px);
+	--min-medium: calc(var(--medium-size) * -1px);
 }
 
 @font-face {
@@ -28,8 +29,7 @@ html, body {
 	font-family: roboto;
 	font-size: 15px;
 }
+
 * {
 	box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }

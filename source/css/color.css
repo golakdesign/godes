@@ -313,6 +313,9 @@
 	--white: #FFFFFF;
 }
 
+body {
+	color: var(--grey-8);
+}
 
 /*Background Red*/
 .bg-red-0 {background-color: var(--red-0);}

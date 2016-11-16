@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
-	padding-bottom: var(--medium);
-	padding-top: var(--medium);
+	margin-bottom: var(--medium);
+	margin-top: var(--medium);
 	margin: 0px;
 }
 h4, h5, h6 {

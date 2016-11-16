@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+a:visited {
+	color: inherit;
+}
+
+div {
+	display: block;
+}
+.center-thing {
+	margin: 0;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.pull-right {
+	float: right;
+}
+.pull-left {
+	float: left;
+}
